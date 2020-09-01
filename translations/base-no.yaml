@@ -219,7 +219,7 @@ dialogs:
 
     oneSavegameLimit:
         title: Begrenset Lagringsfiler
-        desc: Du kan du ha en lagringsfil om gangen i demo versjonen. Vennligst slett den eksisterende, eller skaff frittstående versjon!
+        desc: Du kan kun ha en lagringsfil om gangen i demo versjonen. Vennligst slett den eksisterende, eller skaff frittstående versjon!
 
     updateSummary:
         title: Ny oppdatering!!
@@ -268,8 +268,8 @@ dialogs:
         title: Eksporter skjermbilde
         desc: Du forespurte å eksportere bilde av basen din som et skjermbilde. Vær obs på at dette kan ta lang tid for en stor base, og i verste fall kræsje spillet ditt (Husk å lagre først)!
     massCutInsufficientConfirm:
-        title: Confirm cut
-        desc: You can not afford to paste this area! Are you sure you want to cut it?
+        title: Bekreft klipp
+        desc: Du har ikke råd til å lime inn dette området! Er du sikker på at du ønsker å klippe det?
 
 ingame:
     # This is shown in the top left corner and displays useful keybindings in
@@ -387,7 +387,7 @@ ingame:
         waypoints: Markør
         hub: Hovedbygning
         description: Venstreklikk en markør for å gå dit, høyreklikk for å slette markøren.<br><br>Trykk <keybinding> for å lage en markør fra nåværende sted, eller <strong>høyreklikk</strong> for å lage en markør på valgt område.
-        creationSuccessNotification: Markren ble laget.
+        creationSuccessNotification: Markøren ble laget.
 
     # Interactive tutorial
     interactiveTutorial:
@@ -408,12 +408,12 @@ ingame:
         purple: Lilla
         cyan: Cyan
         white: Hvit
-        uncolored: Ingen farge
+        uncolored: Ufarget
         black: Black
     shapeViewer:
         title: Lag
         empty: Tom
-        copyKey: Copy Key
+        copyKey: Kopier Nøkkel
 
 # All shop upgrades
 shopUpgrades:
@@ -476,10 +476,10 @@ buildings:
     cutter:
         default:
             name: &cutter Kutter
-            description: Kutter objekter fra top til bunn og spytter ut begge halvdeler. <strong>Hvis du bare skal bruke den ene biten, sørg for å ødelegge den andre biten ellers vil det låse seg!</strong>
+            description: Kutter objekter fra top til bunn og spytter ut begge halvdeler. <strong>Hvis du bare skal bruke en bit, sørg for å ødelegge den andre biten ellers vil det låse seg!</strong>
         quad:
             name: Kutter (4-Veis)
-            description: Kutter objekter til 4 biter. <strong>Hvis du bare skal bruke den ene biten, sørg for å ødelegge den andre biten ellers vil det låse seg!</strong>
+            description: Kutter objekter til 4 biter. <strong>Hvis du bare skal bruke en bit, sørg for å ødelegge de andre bitene ellers vil det låse seg!</strong>
 
     rotater:
         default:
@@ -490,7 +490,7 @@ buildings:
             description: Roter objekter mot klokken, 90 grader.
         fl:
             name: Rotate (180)
-            description: Rotates shapes by 180 degrees.
+            description: Roterer former 180 grader.
 
     stacker:
         default:
@@ -505,13 +505,13 @@ buildings:
     painter:
         default:
             name: &painter Maler
-            description: &painter_desc Maler hele objektet på venstre inngang med fargen fra øverste inngang.
+            description: &painter_desc Maler hele formen på venstre inngang med fargen fra øverste inngang.
         double:
             name: Maler (Dobbel)
-            description: Maler hele objektet på venstre inngang med fargen fra øverste inngang.
+            description: Maler begge formene på venstre inngang med fargen fra øverste inngang.
         quad:
             name: Maler (Fireganger)
-            description: Farger enhver kvadrant av objektet med forskjellige farger.
+            description: Farger enhver kvadrant av formen med forskjellige farger.
         mirrored:
             name: *painter
             description: *painter_desc
@@ -526,25 +526,25 @@ buildings:
             description: Lagrer overflødige objekter, opp til en viss kapasitet. Kan bli brukt som mellomlagring for overflyt.
     wire:
         default:
-            name: Energy Wire
-            description: Allows you to transport energy.
+            name: Energi Kabel
+            description: Tillater deg å transportere energi.
     advanced_processor:
         default:
-            name: Color Inverter
-            description: Accepts a color or shape and inverts it.
+            name: Farge Inverterer
+            description: Aksepterer en form eller farge og inverterer den.
     energy_generator:
         deliver: Deliver
         toGenerateEnergy: For
         default:
-            name: Energy Generator
-            description: Generates energy by consuming shapes.
+            name: Energi Generator
+            description: Genererer energi ved å ta inn former.
     wire_crossings:
         default:
-            name: Wire Splitter
-            description: Splits a energy wire into two.
+            name: Kabel Splitter
+            description: Splitter en energi kabel i to.
         merger:
-            name: Wire Merger
-            description: Merges two energy wires into one.
+            name: Kabel sammenslåer
+            description: Slår sammen to energi kabler til en.
 
 storyRewards:
     # Those are the rewards gained from completing the store
@@ -632,9 +632,9 @@ storyRewards:
 settings:
     title: Instillinger
     categories:
-        general: General
-        userInterface: User Interface
-        advanced: Advanced
+        general: Generelt
+        userInterface: Brukergrensesnitt
+        advanced: Avansert
 
     versionBadges:
         dev: Utvikling
@@ -659,23 +659,23 @@ settings:
             description: >-
                 Endrer hvor sensitiv forstørringen er (Enten musehjulet eller trackpad).
             sensitivity:
-                super_slow: Veldig Sakte
+                super_slow: Veldig sakte
                 slow: Sakte
                 regular: Vanlig
                 fast: Raskt
-                super_fast: Veldig Raskt
+                super_fast: Veldig raskt
 
         movementSpeed:
             title: Bevegelses hastighet
             description: >-
                 Endrer hvor raskt bildet beveger seg når man bruker tastaturet.
             speeds:
-                super_slow: Veldig Sakte slow
+                super_slow: Veldig sakte
                 slow: Sakte
                 regular: Vanlig
                 fast: Raskt
-                super_fast: Veldig Raskt
-                extremely_fast: Ekstremt Raskt
+                super_fast: Veldig raskt
+                extremely_fast: Ekstremt raskt
 
         language:
             title: Språk
@@ -734,7 +734,7 @@ settings:
         autosaveInterval:
             title: Autolagringsintervall
             description: >-
-                Jsuter hvor ofte spillet lagres automatisk. Du kan også
+                Juster hvor ofte spillet lagres automatisk. Du kan også
                 deaktivere det fullstendig.
             intervals:
                 one_minute: 1 Minutt
@@ -776,7 +776,7 @@ keybindings:
         ingame: Spill
         navigation: Navigering
         placement: Plassering
-        massSelect: Velg Masse
+        massSelect: Masse Valg
         buildings: Bygnings Snarvei
         placementModifiers: Plasserings Alternativer
 
@@ -827,14 +827,14 @@ keybindings:
         placementDisableAutoOrientation: Deaktiver automatisk orientering
         placeMultiple: Forbli i plasseringsmodus
         placeInverse: Inverter automatisk transportbånd orientering
-        lockBeltDirection: Enable belt planner
+        lockBeltDirection: Aktiver belte planlegger
         switchDirectionLockSide: "Planlegger: Bytt side"
         pipette: Pipette
-        menuClose: Close Menu
-        switchLayers: Switch layers
-        advanced_processor: Color Inverter
-        energy_generator: Energy Generator
-        wire: Energy Wire
+        menuClose: Lukk Meny
+        switchLayers: Veksle mellom lag
+        advanced_processor: Farge Inverterer
+        energy_generator: Energi Generator
+        wire: Energi Kabel
 
 about:
     title: Om dette spillet
